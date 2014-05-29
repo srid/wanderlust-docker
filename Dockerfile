@@ -14,10 +14,16 @@ RUN git clone git://github.com/bbatsov/prelude.git $HOME/.emacs.d
 # * `|| true` is to discard the benign "Error: server did not start correctly" message
 RUN emacs --daemon --kill || true
 
-# wl setup files
+# Color theme suited for email 
+# RUN emacs --daemon --eval "(package-install 'solarized-theme)" --kill || true
+RUN echo "(load-theme 'misterioso t)" > ~/.emacs.d/personal/custom.el
+
+# wl data files (from data volumes)
 RUN ln -s /data/.wl ~/.wl && \
     ln -s /data/.addresses ~/.addresses && \
+    ln -s /data/.folders ~/.folders && \
     ln -s /data/.elmo ~/.elmo && \
+    ln -s /data/Mail ~/Mail && \
     mkdir ~/tmp
 
 # emacs 256 colors

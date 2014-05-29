@@ -18,7 +18,7 @@ stop:
 	sudo ${DOCKER} rm -v ${CONTAINER} || true
 
 prepare:
-	mkdir -p data/.elmo
+	mkdir -p data/.elmo data/Mail
 
 # inspect the image
 shell:
