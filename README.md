@@ -1,6 +1,7 @@
 # wanderlust-docker
 
-Easily installable emacs client (Emacs + wanderlust) via docker.
+Easily installable email client (Emacs + wanderlust) using docker.
+
 
 ## getting started
 
@@ -9,7 +10,9 @@ Easily installable emacs client (Emacs + wanderlust) via docker.
 make
 
 # configure email account
-# TODO (data/.wl)
+cat > data/.wl
+TODO
+^D
 
 # run!
 make run
