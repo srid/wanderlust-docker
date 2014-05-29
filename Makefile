@@ -10,12 +10,15 @@ RUNARGS := -v ${PWD}/data:/data:rw
 all:
 	sudo ${DOCKER} build -t ${IMAGE} .
 
-run:	stop
+run:	stop prepare
 	sudo ${DOCKER} run -t -i --name ${CONTAINER} ${RUNARGS} ${IMAGE}
 
 stop:
 	sudo ${DOCKER} kill ${CONTAINER} || true
 	sudo ${DOCKER} rm -v ${CONTAINER} || true
+
+prepare:
+	mkdir -p data/.elmo
 
 # inspect the image
 shell:

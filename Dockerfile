@@ -14,7 +14,13 @@ RUN git clone git://github.com/bbatsov/prelude.git $HOME/.emacs.d
 # * `|| true` is to discard the benign "Error: server did not start correctly" message
 RUN emacs --daemon --kill || true
 
+# wl setup files
+RUN ln -s /data/.wl ~/.wl && \
+    ln -s /data/.addresses ~/.addresses && \
+    ln -s /data/.elmo ~/.elmo && \
+    mkdir ~/tmp
+
 # emacs 256 colors
 ENV TERM xterm-256color
 
-CMD ["emacs"]
+CMD ["emacs", "--eval", "(wl)", "--no-splash", "--name", "Email", "-vb"]
