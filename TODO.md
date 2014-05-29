@@ -1,4 +1,3 @@
-* get rid of prelude
 * cuztomize wl colors for sanity (putty use)
 * document password saving
 * document .elmo thing

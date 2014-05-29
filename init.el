@@ -1,5 +1,22 @@
+;; Install packages (effective during image creation only)
+(require 'package)
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+(when (not package-archive-contents)
+  (package-refresh-contents))
+(defvar my-packages
+  '(starter-kit-bindings
+    auto-complete
+    zenburn-theme)
+  "A list of packages to ensure are installed at launch.")
+(dolist (p my-packages)
+  (when (not (package-installed-p p))
+    (package-install p)))
 
-(load-theme 'misterioso t)
+
+;; Use a suitable theme for reading email
+(load-theme 'zenburn t)
 
 
 ;; *** 
