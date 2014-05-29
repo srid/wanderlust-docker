@@ -16,7 +16,9 @@ RUN emacs --daemon --kill || true
 
 # Color theme suited for email 
 # RUN emacs --daemon --eval "(package-install 'solarized-theme)" --kill || true
-RUN echo "(load-theme 'misterioso t)" > ~/.emacs.d/personal/custom.el
+
+# wl configuration
+ADD custom.el $HOME/.emacs.d/personal/custom.el
 
 # wl data files (from data volumes)
 RUN ln -s /data/.wl ~/.wl && \

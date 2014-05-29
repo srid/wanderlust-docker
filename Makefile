@@ -8,7 +8,7 @@ PWD := $(shell pwd)
 RUNARGS := -v ${PWD}/data:/data:rw 
 
 all:
-	sudo ${DOCKER} build -t ${IMAGE} .
+	sudo ${DOCKER} build --rm -t ${IMAGE} .
 
 run:	stop prepare
 	sudo ${DOCKER} run -t -i --name ${CONTAINER} ${RUNARGS} ${IMAGE}
