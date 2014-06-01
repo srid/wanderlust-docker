@@ -18,7 +18,7 @@ stop:
 	sudo ${DOCKER} rm -v ${CONTAINER} || true
 
 prepare:
-	mkdir -p data/.elmo data/Mail
+	mkdir -p data/.elmo data/Mail data/irc-logs
 
 # inspect the image
 shell:
