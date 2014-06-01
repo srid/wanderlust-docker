@@ -57,3 +57,22 @@
   "^Subject:"))
 ;;   "^Date:"))
 
+
+
+;; Bonus: IRC support
+(global-set-key (kbd "C-c i") 'irc)
+
+;; Turn on spell checking.
+(add-hook 'rcirc-mode-hook (lambda ()
+			     (flyspell-mode 1)))
+;; Adjust the colours of one of the faces.
+(set-face-foreground 'rcirc-my-nick "red" nil)
+
+;; Include date in time stamp.
+(setq rcirc-time-format "%Y-%m-%d %H:%M ")
+
+;; For buffer-switching
+(global-set-key [?\M-i] 'ido-switch-buffer)
+
+(if (file-exists-p "/data/custom.el") 
+    (load "/data/custom.el"))

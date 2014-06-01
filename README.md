@@ -5,7 +5,8 @@ Docker image for the [wanderlust email client](http://www.emacswiki.org/emacs/Wa
 ## features
 
 * HTML email
-* ...
+* Bonus feature: IRC
+  * Alt+i shortcut to switch buffer
 
 ## getting started
 

@@ -22,4 +22,4 @@ RUN ln -s /data/.wl ~/.wl && \
     ln -s /data/Mail ~/Mail && \
     mkdir ~/tmp
 
-CMD ["emacs", "--eval", "(wl)", "--no-splash", "--name", "Email", "-vb"]
+CMD ["emacs", "--eval", "(wl)", "--no-splash", "--name", "Email", "-vb", "--debug-init"]
