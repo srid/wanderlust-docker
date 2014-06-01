@@ -60,7 +60,8 @@
 
 
 ;; Bonus: IRC support
-(global-set-key (kbd "C-c i") 'irc)
+;; (global-set-key (kbd "C-c i") 'irc)
+(global-set-key (kbd "C-c m") 'wl)
 
 ;; Turn on spell checking.
 (add-hook 'rcirc-mode-hook (lambda ()
