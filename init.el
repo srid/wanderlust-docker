@@ -71,6 +71,10 @@
 ;; Include date in time stamp.
 (setq rcirc-time-format "%Y-%m-%d %H:%M ")
 
+;; Enable logging to data volume
+(setq rcirc-log-flag t)
+(setq rcirc-log-directory "/data/irc-logs")
+
 ;; For buffer-switching
 (global-set-key [?\M-i] 'ido-switch-buffer)
 
