@@ -2,9 +2,10 @@
 
 Docker image for the [wanderlust email client](http://www.emacswiki.org/emacs/WanderLust), with configuration stored as a volume.
 
-# why?
+## features
 
-To keep the email client separate from the editor process. Also to run it on a different server via ssh, keeping all but configuration bundled as a docker image for easy install.
+* HTML email
+* ...
 
 ## getting started
 
