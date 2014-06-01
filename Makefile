@@ -2,8 +2,8 @@
 DOCKER := "/usr/bin/docker.io"  # Using Ubuntu 14.04's docker.io package
 # End of user configuration.
 
-IMAGE := srid/wanderlust
-CONTAINER := wanderlust
+IMAGE := srid/commdock
+CONTAINER := commdock
 PWD := $(shell pwd)
 RUNARGS := -v ${PWD}/data:/data:rw 
 
